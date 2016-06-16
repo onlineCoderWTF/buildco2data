@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CO2vsTEMP v3 | amCharts</title>
+		<meta name="description" content="chart created using amCharts live editor" />
+
+		<!-- amCharts javascript sources -->
+		<script type="text/javascript" src="http://www.amcharts.com/lib/3/amcharts.js"></script>
+		<script type="text/javascript" src="http://www.amcharts.com/lib/3/serial.js"></script>
+		<script type="text/javascript" src="http://www.amcharts.com/lib/3/themes/dark.js"></script>
+
+		<!-- amCharts javascript code -->
+		<script type="text/javascript">
+			AmCharts.makeChart("chartdiv",
+				{
+					"type": "serial",
+					"categoryField": "category",
+					"accessibleTitle": "",
+					"theme": "dark",
+					"categoryAxis": {
+						"gridPosition": "start",
+						"minPeriod": "hh",
+						"autoGridCount": false,
+						"gridCount": 23,
+						"labelFrequency": 3
+					},
+					"chartCursor": {
+						"enabled": true
+					},
+					"trendLines": [],
+					"graphs": [
+						{
+							"gapPeriod": 0,
+							"id": "AmGraph-1",
+							"lineColorField": "co2color",
+							"lineThickness": 2,
+							"title": "CO2",
+							"type": "smoothedLine",
+							"valueField": "column-1"
+						},
+						{
+							"id": "AmGraph-2",
+							"lineColor": "#FFFF00",
+							"lineThickness": 2,
+							"title": "TEMP",
+							"type": "smoothedLine",
+							"valueAxis": "ValueAxis-2",
+							"valueField": "column-2"
+						}
+					],
+					"guides": [],
+					"valueAxes": [
+						{
+							"id": "ValueAxis-1",
+							"maximum": 3000,
+							"minimum": 0,
+							"autoGridCount": false,
+							"gridCount": 15,
+							"title": "CO2",
+							"titleFontSize": 15,
+							"titleRotation": 0
+						},
+						{
+							"id": "ValueAxis-2",
+							"maximum": 50,
+							"minimum": -10,
+							"position": "right",
+							"gridAlpha": 0,
+							"title": "TEMP",
+							"titleRotation": 0
+						}
+					],
+					"allLabels": [],
+					"balloon": {},
+					"titles": [
+						{
+							"id": "Title-1",
+							"size": 15,
+							"text": "ROOM 310: CO2 / TEMP GRAPH"
+						}
+					],
+					"dataProvider": [
+						{
+							"category": "00:04",
+							"column-1": "458",
+							"column-2": "26.10",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "00:09",
+							"column-1": "448",
+							"column-2": "26.16",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "00:14",
+							"column-1": "463",
+							"column-2": "26.16",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "00:19",
+							"column-1": "446",
+							"column-2": "26.16",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "00:24",
+							"column-1": "468",
+							"column-2": "26.16",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "00:34",
+							"column-1": "456",
+							"column-2": "26.16",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "00:44",
+							"column-1": "443",
+							"column-2": "26.16",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "00:49",
+							"column-1": "458",
+							"column-2": "26.16",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "01:09",
+							"column-1": "468",
+							"column-2": "26.23",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "01:14",
+							"column-1": "442",
+							"column-2": "26.23",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "01:19",
+							"column-1": "454",
+							"column-2": "26.23",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "01:34",
+							"column-1": "438",
+							"column-2": "26.23",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "01:39",
+							"column-1": "448",
+							"column-2": "26.23",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "01:49",
+							"column-1": "435",
+							"column-2": "26.23",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "01:54",
+							"column-1": "458",
+							"column-2": "26.23",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "02:39",
+							"column-1": "446",
+							"column-2": "26.29",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "03:09",
+							"column-1": "428",
+							"column-2": "26.29",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "03:24",
+							"column-1": "438",
+							"column-2": "26.29",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "03:29",
+							"column-1": "449",
+							"column-2": "26.29",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "03:39",
+							"column-1": "438",
+							"column-2": "26.35",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "03:44",
+							"column-1": "458",
+							"column-2": "26.29",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "03:54",
+							"column-1": "442",
+							"column-2": "26.35",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "04:09",
+							"column-1": "454",
+							"column-2": "26.35",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "04:34",
+							"column-1": "442",
+							"column-2": "26.35",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "04:49",
+							"column-1": "430",
+							"column-2": "26.35",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "05:04",
+							"column-1": "442",
+							"column-2": "26.35",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "05:24",
+							"column-1": "432",
+							"column-2": "26.35",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "05:29",
+							"column-1": "449",
+							"column-2": "26.35",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "05:54",
+							"column-1": "434",
+							"column-2": "26.35",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "05:59",
+							"column-1": "445",
+							"column-2": "26.41",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "06:04",
+							"column-1": "429",
+							"column-2": "26.41",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "06:34",
+							"column-1": "417",
+							"column-2": "26.41",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "06:39",
+							"column-1": "445",
+							"column-2": "26.41",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "06:44",
+							"column-1": "434",
+							"column-2": "26.41",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "07:09",
+							"column-1": "421",
+							"column-2": "26.48",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "07:14",
+							"column-1": "431",
+							"column-2": "26.48",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "07:24",
+							"column-1": "452",
+							"column-2": "26.48",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "07:34",
+							"column-1": "426",
+							"column-2": "26.48",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "07:39",
+							"column-1": "450",
+							"column-2": "26.48",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "07:44",
+							"column-1": "432",
+							"column-2": "26.48",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "07:49",
+							"column-1": "442",
+							"column-2": "26.48",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "08:09",
+							"column-1": "425",
+							"column-2": "26.54",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "08:14",
+							"column-1": "442",
+							"column-2": "26.54",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "08:19",
+							"column-1": "417",
+							"column-2": "26.54",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "08:24",
+							"column-1": "428",
+							"column-2": "26.54",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "08:49",
+							"column-1": "468",
+							"column-2": "26.60",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "08:54",
+							"column-1": "486",
+							"column-2": "26.60",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "08:59",
+							"column-1": "479",
+							"column-2": "25.98",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "09:04",
+							"column-1": "450",
+							"column-2": "24.91",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "09:09",
+							"column-1": "415",
+							"column-2": "24.04",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "09:14",
+							"column-1": "440",
+							"column-2": "24.10",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "09:19",
+							"column-1": "410",
+							"column-2": "24.35",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "09:24",
+							"column-1": "429",
+							"column-2": "24.54",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "09:34",
+							"column-1": "518",
+							"column-2": "24.85",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "09:39",
+							"column-1": "573",
+							"column-2": "24.98",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "09:44",
+							"column-1": "477",
+							"column-2": "24.60",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "09:54",
+							"column-1": "447",
+							"column-2": "23.98",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "09:59",
+							"column-1": "434",
+							"column-2": "23.66",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "10:04",
+							"column-1": "439",
+							"column-2": "23.16",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "10:14",
+							"column-1": "454",
+							"column-2": "22.98",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "10:19",
+							"column-1": "427",
+							"column-2": "22.79",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "10:24",
+							"column-1": "424",
+							"column-2": "22.10",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "10:29",
+							"column-1": "447",
+							"column-2": "22.10",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "10:34",
+							"column-1": "428",
+							"column-2": "21.66",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "10:54",
+							"column-1": "419",
+							"column-2": "21.35",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "10:59",
+							"column-1": "383",
+							"column-2": "21.35",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "11:04",
+							"column-1": "393",
+							"column-2": "21.35",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "11:09",
+							"column-1": "413",
+							"column-2": "21.41",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "11:24",
+							"column-1": "434",
+							"column-2": "21.54",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "11:29",
+							"column-1": "460",
+							"column-2": "21.60",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "11:34",
+							"column-1": "493",
+							"column-2": "21.66",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "11:39",
+							"column-1": "478",
+							"column-2": "21.73",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "11:49",
+							"column-1": "488",
+							"column-2": "21.79",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "11:54",
+							"column-1": "505",
+							"column-2": "21.85",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "11:59",
+							"column-1": "491",
+							"column-2": "21.91",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "12:04",
+							"column-1": "448",
+							"column-2": "21.91",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "12:09",
+							"column-1": "478",
+							"column-2": "22.10",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "12:14",
+							"column-1": "594",
+							"column-2": "22.35",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "12:19",
+							"column-1": "719",
+							"column-2": "22.60",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "12:24",
+							"column-1": "797",
+							"column-2": "22.79",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "12:29",
+							"column-1": "903",
+							"column-2": "23.04",
+							"co2color": "#FF8000"
+						},
+						{
+							"category": "12:34",
+							"column-1": "975",
+							"column-2": "23.29",
+							"co2color": "#FF8000"
+						},
+						{
+							"category": "12:39",
+							"column-1": "1077",
+							"column-2": "23.54",
+							"co2color": "#FF8000"
+						},
+						{
+							"category": "12:44",
+							"column-1": "1067",
+							"column-2": "23.73",
+							"co2color": "#FF8000"
+						},
+						{
+							"category": "12:49",
+							"column-1": "1122",
+							"column-2": "23.91",
+							"co2color": "#FF8000"
+						},
+						{
+							"category": "12:54",
+							"column-1": "1133",
+							"column-2": "24.10",
+							"co2color": "#FF8000"
+						},
+						{
+							"category": "12:59",
+							"column-1": "1177",
+							"column-2": "24.29",
+							"co2color": "#FF8000"
+						},
+						{
+							"category": "13:04",
+							"column-1": "1223",
+							"column-2": "24.41",
+							"co2color": "#FF0000"
+						},
+						{
+							"category": "13:09",
+							"column-1": "1295",
+							"column-2": "24.60",
+							"co2color": "#FF0000"
+						},
+						{
+							"category": "13:14",
+							"column-1": "1374",
+							"column-2": "24.73",
+							"co2color": "#FF0000"
+						},
+						{
+							"category": "13:19",
+							"column-1": "1461",
+							"column-2": "24.91",
+							"co2color": "#FF0000"
+						},
+						{
+							"category": "13:24",
+							"column-1": "1514",
+							"column-2": "25.04",
+							"co2color": "#FF0000"
+						},
+						{
+							"category": "13:29",
+							"column-1": "1572",
+							"column-2": "25.23",
+							"co2color": "#FF0000"
+						},
+						{
+							"category": "13:34",
+							"column-1": "1509",
+							"column-2": "25.35",
+							"co2color": "#FF0000"
+						},
+						{
+							"category": "13:39",
+							"column-1": "1022",
+							"column-2": "25.35",
+							"co2color": "#FF8000"
+						},
+						{
+							"category": "13:44",
+							"column-1": "982",
+							"column-2": "25.35",
+							"co2color": "#FF8000"
+						},
+						{
+							"category": "13:49",
+							"column-1": "1105",
+							"column-2": "25.48",
+							"co2color": "#FF8000"
+						},
+						{
+							"category": "13:54",
+							"column-1": "1123",
+							"column-2": "25.54",
+							"co2color": "#FF8000"
+						},
+						{
+							"category": "13:59",
+							"column-1": "1062",
+							"column-2": "25.66",
+							"co2color": "#FF8000"
+						},
+						{
+							"category": "14:04",
+							"column-1": "983",
+							"column-2": "25.66",
+							"co2color": "#FF8000"
+						},
+						{
+							"category": "14:09",
+							"column-1": "885",
+							"column-2": "25.73",
+							"co2color": "#FF8000"
+						},
+						{
+							"category": "14:14",
+							"column-1": "857",
+							"column-2": "25.73",
+							"co2color": "#FF8000"
+						},
+						{
+							"category": "14:19",
+							"column-1": "628",
+							"column-2": "25.60",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "14:24",
+							"column-1": "590",
+							"column-2": "25.48",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "14:29",
+							"column-1": "607",
+							"column-2": "25.35",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "14:34",
+							"column-1": "627",
+							"column-2": "25.16",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "14:44",
+							"column-1": "651",
+							"column-2": "24.98",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "14:49",
+							"column-1": "748",
+							"column-2": "24.73",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "14:54",
+							"column-1": "694",
+							"column-2": "24.41",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "14:59",
+							"column-1": "659",
+							"column-2": "24.41",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "15:04",
+							"column-1": "626",
+							"column-2": "24.35",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "15:09",
+							"column-1": "591",
+							"column-2": "24.29",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "15:14",
+							"column-1": "578",
+							"column-2": "24.29",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "15:19",
+							"column-1": "603",
+							"column-2": "24.23",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": "15:24",
+							"column-1": "629",
+							"column-2": "24.29",
+							"co2color": "#00FF00"
+						},
+						{
+							"category": ""
+						}
+					]
+				}
+			);
+		</script>
+	</head>
+	<body>
+		<div id="chartdiv" style="width: 100%; height: 400px; background-color: #282828;" ></div>
+	</body>
+</html>

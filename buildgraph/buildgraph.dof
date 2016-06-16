@@ -100,7 +100,7 @@ Conditionals=
 DebugSourceDirs=
 UsePackages=0
 [Parameters]
-RunParams=
+RunParams=fromFile="09.CSV" intoFile="09.RAW"
 HostApplication=
 Launcher=
 UseLauncher=0

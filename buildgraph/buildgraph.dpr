@@ -4,7 +4,8 @@ program buildgraph;
 
 uses
   SysUtils,
-  jclStringLists;
+  jclStringLists,
+  jclFileUtils;
 
 var data: IJCLStringList;
     text: IJCLStringList;
@@ -22,9 +23,14 @@ var data: IJCLStringList;
     tval, prvval: integer;
     ttmp, pvtemp: double;
     fs: TFormatSettings;
+    fromFile: string;
+    intoFile: string;
 const splby =100;
 begin
-  data := jclStringList.loadFromFile('Y:\09.CSV');
+  fromFile := jclFileUtils.ParamValue('fromFile');
+  intoFile := jclFileUtils.ParamValue('intoFile');
+
+  data := jclStringList.loadFromFile(fromFile);
     lim1 := JCLStringList;
     lim2 := JCLStringList;
     vals := JCLStringList;
@@ -68,6 +74,6 @@ begin
   res.Add(lim2.Join(','));
   res.Add(clrs.Join(','));
 
-  res.SaveToFile('Y:\09.XML');
-  a.SaveToFile('Y:\09.NEW');
+  //res.SaveToFile('Y:\09.XML');
+  a.SaveToFile(intoFile);
 end.
