@@ -27,6 +27,7 @@ var data: IJCLStringList;
     intoFile: string;
 const splby =100;
 begin
+  try
   fromFile := jclFileUtils.ParamValue('fromFile');
   intoFile := jclFileUtils.ParamValue('intoFile');
 
@@ -43,12 +44,12 @@ begin
     fs.DecimalSeparator := '.';
   a := jclstringlist('category;column-1;column-2;co2color');
   for i := 1 to data.Count - 1 do begin
-    if i mod splby <> 0 then
-      continue;
+    //if i mod splby <> 0 then
+    //  continue;
     vals := jclStringList.Split(data[i], ',');
     tval :=  strtoint(vals[1]);
     ttmp :=  strtofloat(vals[2], fs);
-    if (ABS(tval - prvval) < 10) and (ABS(ttmp - pvtemp) < 0.3) then
+    if ((i <> 1) and (i <> data.Count - 1)) and (ABS(tval - prvval) < 10) and (ABS(ttmp - pvtemp) < 0.3) then
       continue;
     pvtemp := ttmp;
     prvval := tval;
@@ -76,4 +77,8 @@ begin
 
   //res.SaveToFile('Y:\09.XML');
   a.SaveToFile(intoFile);
+  except
+    on anyException: exception do
+      writeln('ERR: ' + anyException.message);
+  end;
 end.
